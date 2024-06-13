@@ -1,15 +1,14 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=floppacafe";
-$username = "root";
+$dsn = "mysql:host=localhost; dbname=floppacafe";
+$user = "root";
 $password = "";
 
 try {
-    $connection = new PDO($dsn, $username, $password);
-    // echo "Conexión exitosa a la base de datos!";
-} catch (Exception $e) {
+    $conn = new PDO($dsn, $user, $password);
+    // echo "Conexion a la Base de Datos Exitosa!";
+} catch (PDOException $e) {
     echo $e->getMessage();
 }
-
 
 ?>
